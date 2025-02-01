@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Start Screen */
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#start-btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #76c893;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-btn:hover {
+    background-color: #58a581;
+}
+
+/* Centered Full-Screen Text Sequence */
+.text-sequence {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 1;
+}
+
+/* Question Section */
+.question {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.question.visible {
+    opacity: 1;
+}
+
+.question h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Snowman Image */
+.question img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#yes-btn {
+    background-color: #76c893;
+    color: white;
+}
+
+#yes-btn:hover {
+    background-color: #58a581;
+}
+
+#no-btn {
+    background-color: #e76f51;
+    color: white;
+}
+
+#no-btn:hover {
+    background-color: #cf5643;
+}
+
+/* Gif Container */
+#gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: 2;
+}
+
+#gif-container img {
+    max-width: 80%;
+    border-radius: 10px;
+}
